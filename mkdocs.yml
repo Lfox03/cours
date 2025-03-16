@@ -12,6 +12,7 @@ theme:
     - navigation.path
     - navigation.top
     - toc.integrate
+    - content.tooltips
   palette: 
 
     # Palette toggle for light mode

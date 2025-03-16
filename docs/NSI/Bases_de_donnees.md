@@ -1,5 +1,5 @@
 ---
-title: 1. Bases de données
+title: Bases de données
 description: des fonctions et définitions de base pour la NSI.
 ---
 
@@ -22,3 +22,7 @@ Une section mémo pour les fonctions et définitions de base en NSI
 
     Par conséquent, la valeur d'une clé étrangère doit toujours être également une des valeurs de la clé référencée.
 
+```sql linenums="1"
+SELECT * FROM Jaja
+WHERE id_jaja > 5
+```

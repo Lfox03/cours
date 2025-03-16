@@ -1,5 +1,5 @@
 ---
-title: 2. Arbres
+title: Arbres
 description: Les bases des arbres en NSI.
 ---
 
