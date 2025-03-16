@@ -1,9 +1,9 @@
 ---
 title: Chapitre 1 - M.& O. - vecteurs de la mondialisation
-description: Chapitre 2 - Mers et Océans - les vecteurs essentiels de la mondialisation
+description: Chapitre 1 - Mers et Océans - les vecteurs essentiels de la mondialisation
 ---
 
-# Chapitre 2 - Mers et Océans - les vecteurs essentiels de la mondialisation
+# Chapitre 1 - Mers et Océans - les vecteurs essentiels de la mondialisation
 
 ## **Introduction :**
 
