@@ -25,6 +25,7 @@ L'objectif est de rester fidèle à la structure des cours au lycée (chapitres,
 - [NSI](NSI/index.md)
     - [Arbres](NSI/Arbres.md)
     - [Bases de données](NSI/Bases_de_donnees.md)
+    - [Graphes](NSI/Graphes.md)
 
 - **Plus à venir** !
 
