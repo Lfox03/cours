@@ -10,7 +10,7 @@ description: Introduction aux graphes.
 
 	En général, un graphe est un ensemble d'objets, appelés sommets ou parfois noeuds (vertex or nodes en anglais) reliés par des arêtes ou arcs selon que le graphe est non orienté ou orienté (edge en anglais).
 
-## **A quoi servent les graphes ? Quelques exemples de situations :**
+## **A quoi servent les graphes ? Exemples**
 
 - Informatique: réseau internet (représentation des routeurs), représentation des relations entre différentes tables (BD).
 
@@ -129,6 +129,7 @@ Par exemple, on pourrait dire que A est plus grand que B, et A est plus grand qu
 ![graphe_oriente2](../assets/NSI/graphe_oriente2.png){ align=right }
 
 On rencontre par exemple des graphes orientés à travers la notion d'arborescence (arbres):
+
 - c'est un arbre dont chaque arête est remplacée par une relation orientée qu'on appelle arc;
 
 - le sommet 0 est appelé la "racine"
@@ -140,7 +141,7 @@ Il possède une seule racine tel que tous les nœuds sauf la racine ont un uniqu
 ^^-Application en informatique :^^ l'arborescence des fichiers sur un ordinateurs
 
 !!! note "Définition"
-	Un graphe non orienté G = (V, E) est défini par :
+	Un graphe orienté G = (V, E) est défini par :
 
 	- d’un ensemble V = {v~1~, v~2~, …v~n~} dont les éléments v~i~ sont appelés les **sommets** du graphe.
 
@@ -171,6 +172,16 @@ E={(A, A), (A, B), (B, D), (C, B), (C, D), (D, C), (E, A)}
 !!! tip ""
 	Ainsi, on peut définir pour chaque sommet son **degré sortant** (égal au nombre d’arcs dont il est la première composante) de son **degré entrant** (égal au nombre d’arcs dont il est la seconde composante)
 
+!!! tip ""
+	Soit un arc (x, y), on dit que y est un **successeur** de x et que x est un **prédécesseur** de y.
+
+	On dit également que x est **l’origine** de l’arc (x,y) et que y est son **extrémité**.
+
+!!! tip ""
+	Un graphe orienté est **complet** si chaque paire de sommets est reliée par exactement deux arcs (un dans chaque sens)
+
+---
+
 ## **3) Graphes pondérés**
 
 Un graphe est **pondéré** (ou valué) si on attribue à chaque arête (ou arc) une valeur numérique (la plupart du temps positive), qu'on appelle _mesure_, _poids_, _coût_ ou _valuation_.
@@ -184,9 +195,50 @@ Un graphe est **pondéré** (ou valué) si on attribue à chaque arête (ou arc)
 
 ![graphe_pondéré1](../assets/NSI/graphe_pondere1.png){ style="max-height:300px" }
 
+---
+
 ## **Pour les plus curieux**
 
 **^^Circuits imprimés :^^**
 
 Des pistes de circuits imprimés qui ne se croisent jamais.
+
 C'est le cas des circuits imprimés. Le courant doit aller d'un point à un autre en parcourant une piste sans croiser une autre piste. Ce n'est pas toujours possible. Il faut alors ajouter une nouvelle couche de circuits. Le plus simple étant le double-face, mais certains circuits complexes peuvent compter huit ou dix couches.
+
+---
+
+**^^Application :^^**
+
+Le graphe suivant est-il planaire ? graphe K5
+
+![graphe_k5](../assets/NSI/graphe_k5.png){ style="max-height:300px" }
+
+??? success "Réponse"
+	**Non**
+
+	(Démonstration [villemin.gerard.free.fr](http://villemin.gerard.free.fr/aMaths/Topologi/aaaGraph/Planaire.htm))
+
+---
+
+**^^Énigme :^^**
+
+Proposée en 1903 par Sam Loyd puis en 1917 par Henry Ernest Dudeney.
+
+Trois maisons doivent être chacune reliées à trois usines d’eau, de gaz et d’électricité. Peut-on disposer les canalisations de telle sorte qu’elles ne se chevauchent pas ?
+
+Ci-dessous figure l'illustration originale de l'auteur du problème :
+
+![maison](../assets/NSI/maison.png){ style="max-height:300px" }
+
+Il est facile de voir que les maisons, usines et canalisations peuvent être modélisées par ce graphe :
+
+![maison_graphe](../assets/NSI/maison_graphe.png){ style="max-height:300px" }
+
+La question peut alors se reformuler comme suit : le graphe précédent est-il planaire ?
+
+??? success "Réponse"
+	**Non**, ce graphe est noté K3,3
+
+	Il est impossible de relier ces trois maisons aux trois ressources sans croisement des raccordements. La meilleure solution ne permet de poser huit raccordements sur neuf demandés.
+
+	![maison_réponse](../assets/NSI/maison_reponse.png){ style="max-height:300px" }
