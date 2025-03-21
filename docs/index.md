@@ -15,6 +15,7 @@ L'objectif est de rester fidèle à la structure des cours au lycée (chapitres,
 - [Géographie](Geographie/index.md)
     - [Chapitre 1 - Mers et Océans - les vecteurs essentiels de la mondialisation](Geographie/1-Mers-et-Oceans.md)
     - [Chapitre 2 - Mers et Océans - les enjeux géostratégiques](Geographie/2-Mers-et-Oceans.md)
+    - [Chapitre 3 - La France : une puissance maritime ?](Geographie/3-FR-puissance-maritime.md)
 - [Histoire](Histoire/index.md)
     - [Chapitre 2 - Les totalitarismes européens](Histoire/2-totalitarismes_europeens.md)
     - [Chapitre 3 - La guerre totale d’anéantissement - 2nd GM](Histoire/3-2nd_GM.md)

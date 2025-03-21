@@ -197,6 +197,31 @@ Un graphe est **pondéré** (ou valué) si on attribue à chaque arête (ou arc)
 
 ---
 
+## **Représentation des graphes**
+
+Pour représenter un graphe en langage machine, on utilise deux méthodes principales :
+
+- à l’aide de listes de successeurs ou de prédécesseurs ;
+
+- à l’aide de matrice d’adjacence (le coefficient a~i,j~ traduit l’existence ou non d’une liaison entre le sommet i et le sommet j).
+
+### **I) Listes de successeurs**
+
+!!! note "Définition"
+	**Listes de successeurs :** à chaque sommet on associe la liste de tous ses voisins dans le cas d'un graphe non orienté ou de ses successeurs dans le cas d'un graphe orienté.
+
+Représentation en machine du graphe :
+
+-	On utilise un dictionnaire de listes qui est appelée dans ce cas **liste d'adjacence**.
+
+-	Les clés du dictionnaire sont les sommets. La valeur associée à un sommet est la liste des successeurs de ce sommet. (On peut aussi utiliser la liste de prédécesseurs).
+
+-	La liste des successeurs et celle des prédécesseurs sont identiques dans un graphe non orienté.
+
+-	Dans le cas d’un graphe pondéré, les listes sont remplacées par des dictionnaires. Le graphe est alors un dictionnaire de dictionnaires : le dictionnaire de successeurs a pour clés les étiquettes des sommets successeurs et pour valeurs les valuations des arêtes associées.
+
+
+
 ## **Pour les plus curieux**
 
 **^^Circuits imprimés :^^**

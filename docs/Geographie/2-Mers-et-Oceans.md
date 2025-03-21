@@ -12,6 +12,8 @@ Les EM semblent a priori des espaces de liberté de circulation et d’exploitat
 !!! question "Problématique"
     Quel droit et quelles tensions ?
 
+---
+
 ## **I) A qui appartiennent Mers et Océans ?**
 → les frontières maritimes : un droit, des cas différents.
 
@@ -28,6 +30,8 @@ Un droit applicable aux états côtiers, et aux îles (indépendantes ou non)
 ### **B) Résultats : un accès inégal aux Mers et Océans.**
 
 → posséder un vaste domaine maritime = un élément essentiel  de puissance
+
+---
 
 ## **II) Les tensions**
 
@@ -66,7 +70,7 @@ Un droit applicable aux états côtiers, et aux îles (indépendantes ou non)
     1. La Chine respecte-t-elle le droit international ?
     1. Quelle est l’attitude des autres puissances régionales ? Et des Etats-Unis ?
  
-### **Conclusion**
+## **Conclusion**
 
 Bien loin d'être des espaces « neutres » ou de « liberté » M et O sont des enjeux multiformes et à toutes les échelles qui aboutissent à  des mises en danger elles aussi multiformes ( tensions géopolitiques, surexploitation des ressources...)
 

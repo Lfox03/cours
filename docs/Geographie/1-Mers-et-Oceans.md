@@ -27,6 +27,8 @@ Les mers et océans ont toujours été un enjeux essentiel depuis l'Antiquité (
 
 ^^Étude de cas : le golfe arabo-persique : voir dossier distribué^^
 
+---
+
 ## **I) Mers et Océans : les routes de la mondialisation**
 
 ### **A) les espaces maritimes = concentration de pôles et de flux**
@@ -50,6 +52,8 @@ Les entreprises transnationales sont les entreprises installées dans plusieurs 
  
 Diminution forte des dockers au profit de la mécanisation type portiques et grues à conteneurs
 
+---
+
 ## **II) Mers et Océans : des espaces de ressources de + en + exploitées**
 
 ### **A) les ressources halieutiques (carte P 40) : la pêche**
@@ -68,7 +72,7 @@ Problème de la surexploitation des ressources et des accords à négocier (ex. 
 
 ### **B) les ressources énergétiques et minérales :**
 
-#### **1) les énergies fossiles : pétrole et gaz off-shore (Golfe persique, golfe du Mexique, mer du Nord...**
+#### **1) les énergies fossiles : pétrole et gaz off-shore (Golfe persique, golfe du Mexique, mer du Nord...)**
 
 gisements exploités de + en + importants
 
