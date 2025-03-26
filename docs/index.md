@@ -22,7 +22,7 @@ L'objectif est de retranscrire les cours du lycée tout en restant fidèle à le
     
     [Chapitre 2 - Mers et Océans - les enjeux géostratégiques](Geographie/2-Mers-et-Oceans.md)
     
-    [Chapitre 3 - La France : une puissance maritime ?](Geographie/3-FR-puissance-maritime.md)
+    [Chapitre 3 - La France : une puissance maritime ?:new:](Geographie/3-FR-puissance-maritime.md)
 
 -  :material-book-open:__Histoire__ [:octicons-arrow-right-24:](Histoire/index.md)
 
@@ -60,4 +60,5 @@ Je suis pour l'instant le seul à gérer ce site, et je n'ai en ce moment que pe
 
 ## Actualités
 
-> Aucune actualité pour le moment
+!!! success "*Nouveau* | Géographie : Chapitre 3"
+    **Chapitre 3 - La France : une puissance maritime ?** de Géographie est maintenant disponible en intégralité
