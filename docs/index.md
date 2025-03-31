@@ -22,7 +22,7 @@ L'objectif est de retranscrire les cours du lycée tout en restant fidèle à le
     
     [Chapitre 2 - Mers et Océans - les enjeux géostratégiques](Geographie/2-Mers-et-Oceans.md)
     
-    [Chapitre 3 - La France : une puissance maritime ?:new:](Geographie/3-FR-puissance-maritime.md)
+    [Chapitre 3 - La France : une puissance maritime ? :new:](Geographie/3-FR-puissance-maritime.md)
 
 -  :material-book-open:__Histoire__ [:octicons-arrow-right-24:](Histoire/index.md)
 
@@ -42,13 +42,15 @@ L'objectif est de retranscrire les cours du lycée tout en restant fidèle à le
     
     [suites](Mathematiques/suites.md)
 
+    [fonctions Sinus et Cosinus :construction:](Mathematiques/fonctions_sin_cos.md)
+
 -  :material-code-braces-box:__NSI__ [:octicons-arrow-right-24:](NSI/index.md)
 
     ---
 
     [Arbres](NSI/Arbres.md)
     
-    [Bases de données](NSI/Bases_de_donnees.md)
+    [Bases de données :construction:](NSI/Bases_de_donnees.md)
     
     [Graphes](NSI/Graphes.md)
 
@@ -60,5 +62,8 @@ Je suis pour l'instant le seul à gérer ce site, et je n'ai en ce moment que pe
 
 ## Actualités
 
-!!! success "*Nouveau* | Géographie : Chapitre 3"
-    **Chapitre 3 - La France : une puissance maritime ?** de Géographie est maintenant disponible en intégralité
+!!! Info "*En cours* | Mathématiques : fonctions Sinus et Cosinus | *~ 15%*"
+
+!!! success "*Disponible* | Géographie : Chapitre 3 - La France : une puissance maritime ?"
+
+!!! Info "*En cours* | NSI : Bases de données | *~ 10%*"
