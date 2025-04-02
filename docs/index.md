@@ -48,7 +48,7 @@ L'objectif est de retranscrire les cours du lycée tout en restant fidèle à le
 
     ---
 
-    [Arbres](NSI/Arbres.md)
+    [Arbres :hammer_pick:](NSI/Arbres.md)
     
     [Bases de données :construction:](NSI/Bases_de_donnees.md)
     
@@ -58,12 +58,12 @@ L'objectif est de retranscrire les cours du lycée tout en restant fidèle à le
 
 **Plus à venir !**
 
-Je suis pour l'instant le seul à gérer ce site, et je n'ai en ce moment que peu de temps à ma disposition. Le contenu reste donc pour l'instant assez limité.
-
 ## Actualités
 
-!!! Info "*En cours* | Mathématiques : fonctions Sinus et Cosinus | *~ 15%*"
+!!! Info "*Rénovation* | NSI : Arbres | *~ 10%*"
+
+!!! note "*Rédaction* | Mathématiques : fonctions Sinus et Cosinus | *~ 40%*"
 
 !!! success "*Disponible* | Géographie : Chapitre 3 - La France : une puissance maritime ?"
 
-!!! Info "*En cours* | NSI : Bases de données | *~ 10%*"
+!!! note "*Rédaction* | NSI : Bases de données | *~ 10%*"

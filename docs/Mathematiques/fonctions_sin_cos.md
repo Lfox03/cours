@@ -45,7 +45,7 @@ On ajoute un multiple de 12, ici 36 : $\frac{\pi(-31+36)}{6} = \frac{5\pi}{6}$
 
 ### **1.3. Résolution d'équations**
 
-!!! abstract "Théorème : Résolution de $\cos x = a$ et $\sin x = a$"
+!!! abstract "Théorème 1 : Résolution de $\cos x = a$ et $\sin x = a$"
 
     - si $|a| \gt 1$, il n’y a pas de solution.
 
@@ -77,29 +77,98 @@ On ajoute un multiple de 12, ici 36 : $\frac{\pi(-31+36)}{6} = \frac{5\pi}{6}$
     \text{, avec k} \in \mathbb{Z}
     $$
 
+!!! note "Remarque"
+     $x = \alpha + k2\pi$ peut aussi s'écrire $x = a \quad [2\pi]$ (modulo $2\pi$)
+
+**Exemples :** Résoudre dans $\mathbb{R}$ les équations suivantes :
+
+- $\sqrt{2}\cos{x+1} = 0 \Leftrightarrow \cos x = -\frac{1}{\sqrt{2}} = -\frac{\sqrt{2}}{2} \Leftrightarrow \cos x = \cos \frac{3\pi}{4}$
+
+$$
+\text{Solutions :}
+\left\{ 
+    \begin{array}{l}
+        x = \frac{3\pi}{4} + k2\pi &\\
+        x = -\frac{3\pi}{4} + k2\pi
+    \end{array} 
+\right.
+\text{k} \in \mathbb{Z}
+$$
+
+- $\sin{(x+\frac{\pi}{4})} = \frac{1}{2} \Leftrightarrow \sin (x+\frac{\pi}{4}) = \sin \frac{\pi}{6}$
+
+$$
+\text{Solutions :}
+\left\{ 
+    \begin{array}{l}
+        x + \frac{\pi}{4} = \frac{\pi}{6} + k2\pi &\\
+        x + \frac{\pi}{4}= \pi-\frac{\pi}{6} + k2\pi
+    \end{array} 
+\right.
+\Leftrightarrow
+\left\{ 
+    \begin{array}{l}
+        x = -\frac{\pi}{12} + k2\pi &\\
+        x = \frac{7\pi}{12} + k2\pi
+    \end{array} 
+\right.
+\text{k} \in \mathbb{Z}
+$$
+
+- $\cos 2x = \frac{1}{2} \Leftrightarrow \cos 2x = \cos \frac{\pi}{3}$
+
+$$
+\text{Solutions :}
+\left\{ 
+    \begin{array}{l}
+        2x = \frac{\pi}{3} + k2\pi &\\
+        2x = \frac{\pi}{3} + k2\pi
+    \end{array} 
+\right.
+\Leftrightarrow
+\left\{ 
+    \begin{array}{l}
+        x = \frac{\pi}{6} + k\pi &\\
+        x = -\frac{\pi}{6} + k\pi
+    \end{array} 
+\right.
+\text{k} \in \mathbb{Z}
+$$
+
+### **1.4. Signes des fonctions sinus et cosinus**
+
+!!! abstract "Théorème 2"
+    On a sur $\mathopen{]} -\pi, \pi \mathclose{]}$ :
+    
+    - $\sin x \gt 0 \Leftrightarrow x \in \mathopen{]} 0, \pi \mathclose{[}$
+
+    - $\cos x \gt 0 \Leftrightarrow x \in \mathopen{]} -\frac{\pi}{2}, \frac{\pi}{2} \mathclose{[}$
+
+### **1.5. Résolution d'inéquations**
+
+!!! abstract "Théorème 3"
+    Pour résoudre une inéquation du type $\cos x \leq a$ ou $\sin x \leq a$ on utilisera le cercle unité pour trouver les solutions dans $\mathopen{]} -\pi, \pi \mathclose{]}$
+
+**Exemple :** Résoudre dans $\mathopen{]} -\pi, \pi \mathclose{]}$ : $\quad \cos x \leq \frac{1}{2}$
+
+$\cos x \leq \frac{1}{2} \Leftrightarrow \cos x \leq \cos \frac{\pi}{3}$
+
+$\mathrm S = \mathopen{]} -\pi, -\frac{\pi}{3} \mathclose{]}\cup\mathopen{[} \frac{\pi}{3}, \pi \mathclose{]}$
+
+#### **5.1.5 De sinus à cosinus**
+
+!!! abstract "Théorème 4"
+    D’après les formules de déphasage, on a :
+
+    $\sin (\frac{\pi}{2}-x = \cos x) \quad$ et $\quad \cos (\frac{\pi}{2}-x = \sin x)$
+
 !!! Failure "Fin de la rédaction ici (la suite est uniquement du plan)"
-
-### **Signes des fonctions sinus et cosinus**
-
-Les signes de \( \sin x \) et \( \cos x \) dépendent du quadrant dans lequel se trouve l’angle \( x \).
-
-### **Résolution d'inéquations**
-
-Les inéquations trigonométriques se résolvent en déterminant les valeurs de \( x \) satisfaisant les conditions imposées par les inégalités.
-
-### **De sinus à cosinus**
-
-On utilise l'identité fondamentale :
-
-\[ \cos^2 x + \sin^2 x = 1 \]
-
-pour transformer une équation en fonction de l'une ou l'autre des fonctions trigonométriques.
 
 ---
 
-## **Étude des fonctions sinus et cosinus**
+## **2. Étude des fonctions sinus et cosinus**
 
-### **Périodicité et parité**
+### **2.1. Périodicité et parité**
 
 Les fonctions sinus et cosinus sont périodiques de période \( 2\pi \), avec les propriétés suivantes :
 
