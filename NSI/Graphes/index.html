@@ -1,0 +1,1595 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Introduction aux graphes.">
+      
+      
+      
+        <link rel="canonical" href="https://lfox03.github.io/cours/NSI/Graphes/">
+      
+      
+        <link rel="prev" href="../Bases_de_donnees/">
+      
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Graphes - FoxDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#graphes" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="FoxDocs" class="md-header__button md-logo" aria-label="FoxDocs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FoxDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Graphes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Autre/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Autre
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Geographie/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Geographie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Histoire/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Histoire
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Mathematiques/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Mathematiques
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NSI
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="FoxDocs" class="md-nav__button md-logo" aria-label="FoxDocs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    FoxDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Autre/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Autre
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Autre
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Autre/guide_mathjax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide de Syntaxe MathJax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Geographie/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Geographie
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Geographie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Geographie/1-Mers-et-Oceans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 1 - M.& O. - vecteurs de la mondialisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Geographie/2-Mers-et-Oceans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 2 - M.& O. - enjeux géostratégiques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Geographie/3-FR-puissance-maritime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 3 - France - puissance maritime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Histoire/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Histoire
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Histoire
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Histoire/1-crise_de_1929/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 1 - Crise de 1929
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Nouveau">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Histoire/2-totalitarismes_europeens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 2 - Les totalitarismes européens
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Nouveau">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Histoire/3-2nd_GM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 3 - Seconde Guerre mondiale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Histoire/5-bipolariastion_tiers_Monde/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 5 - Bipolarisation et Tiers Monde
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Nouveau">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Mathematiques/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Mathematiques
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Mathematiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematiques/Primitives_equa_diff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Primitives - Equations différentielles
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Nouveau">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematiques/Probabilitees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probabilitées
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematiques/fonctions_sin_cos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fonctions Sinus et Cosinus
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Nouveau">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematiques/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematiques/suites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suites numériques & récurrence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    NSI
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            NSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Arbres/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arbres
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Bases_de_donnees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bases de données
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Graphes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphes
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-quoi-servent-les-graphes-exemples" class="md-nav__link">
+    <span class="md-ellipsis">
+      A quoi servent les graphes ? Exemples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-graphes-non-orientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Graphes non orientés
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-graphes-orientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Graphes orientés
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-graphes-ponderes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Graphes pondérés
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#representation-des-graphes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Représentation des graphes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Représentation des graphes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-listes-de-successeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      I) Listes de successeurs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pour-les-plus-curieux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pour les plus curieux
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="graphes">Graphes<a class="headerlink" href="#graphes" title="Permanent link">&para;</a></h1>
+<div class="admonition quote">
+<p class="admonition-title">Introduction</p>
+<p>Dans cette première partie nous allons définir les notions de graphes orientés et non orientés, s'intéresser à leurs représentations graphiques et présenter quelques généralités.</p>
+<p>En général, un graphe est un ensemble d'objets, appelés sommets ou parfois noeuds (vertex or nodes en anglais) reliés par des arêtes ou arcs selon que le graphe est non orienté ou orienté (edge en anglais).</p>
+</div>
+<h2 id="a-quoi-servent-les-graphes-exemples"><strong>A quoi servent les graphes ? Exemples</strong><a class="headerlink" href="#a-quoi-servent-les-graphes-exemples" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Informatique: réseau internet (représentation des routeurs), représentation des relations entre différentes tables (BD).</p>
+</li>
+<li>
+<p>Les réseaux : sociaux, routiers, aériens, de distribution de biens ou d'énergie…</p>
+</li>
+<li>
+<p>Mathématiques, biologie, physique, chimie, génétique…</p>
+</li>
+</ul>
+<hr />
+<h2 id="1-graphes-non-orientes"><strong>1) Graphes non orientés</strong><a class="headerlink" href="#1-graphes-non-orientes" title="Permanent link">&para;</a></h2>
+<p>La définition d'un graphe non orienté correspond tout à fait à l'idée que l'on s'en fait intuitivement : un ensemble de points, dont certains sont reliés par des lignes parcourables dans les deux sens.</p>
+<p>Par exemple, cela peut représenter un réseau social. M et D sont reliés par une relation d'amitié (relation symétrique). M est aussi ami avec H, V, L et J…</p>
+<div class="admonition note">
+<p class="admonition-title">Définition</p>
+<p>On utilise les notations anglo-saxonnes, <strong>V</strong> pour <em>Vertices</em> (<em>Sommets</em>) et <strong>E</strong> pour <em>Edge</em> (<em>arêtes)</em>.</p>
+<p>Un graphe non orienté G = (V, E) est défini par :</p>
+<ul>
+<li>
+<p>d’un ensemble V = {v<sub>1</sub>, v<sub>2</sub>, …v<sub>n</sub>} dont les éléments v<sub>i</sub> sont appelés les <strong>sommets</strong> du graphe.</p>
+</li>
+<li>
+<p>d’un ensemble E = {e<sub>1</sub>, e<sub>2</sub>, …e<sub>n</sub>} dont les éléments e<sub>i</sub> sont appelés les <strong>arêtes</strong> du graphe.</p>
+</li>
+</ul>
+<p>Si l’arête e<sub>i</sub> relie les sommets A et B, on dira que ces sommets sont <strong>adjacents</strong> ou <strong>voisins</strong>.</p>
+<p>Les arêtes sont des paires de sommets : chaque arête e<sub>i</sub> s’écrit sous la forme {v<sub>k</sub>, v<sub>m</sub>} avec v<sub>k</sub>, v<sub>m</sub> ∈ <em>V</em>.</p>
+<p>La <strong>représentation sagittale</strong> d’un graphe non orienté est sa représentation sous forme de schéma, les sommets étant modélisés par des <strong>disques</strong> et les arêtes par des <strong>lignes</strong>.</p>
+</div>
+<p><strong><ins>Exemple :</ins></strong></p>
+<p>Pour définir un graphe non orienté, il faut d'abord décrire l'ensemble de ses sommets : V = {A, B, C, D, E}</p>
+<p>Ensuite, on peut alors donner l'ensemble de ses arêtes : E={{A, B},{B},{B, C},{B, D},{C, D},{E, C}}</p>
+<p>Sa représentation sagittale est donc :</p>
+<p><img alt="Graphe_1" src="../../assets/NSI/graphe1.png" style="max-height:300px" /></p>
+<p>A noter qu'un même graphe peut bien sûr avoir <strong>plusieurs représentations sagittales</strong>.</p>
+<p>En voici par exemple une autre représentation sagittale du même graphe :</p>
+<p><img alt="Graphe_1" src="../../assets/NSI/graphe2.png" style="max-height:300px" /></p>
+<p>Le sommet B possède une <strong>boucle</strong> (arête ne possédante qu'un seul élément)</p>
+<div class="admonition example">
+<p class="admonition-title">Application:</p>
+<p><strong>1)</strong> <em>(d'après le graphe ci-dessus)</em></p>
+<p>A et B sont / ne sont pas deux sommets adjacents ou voisins</p>
+<p>A et D sont / ne sont pas deux sommets non adjacents ou non voisins</p>
+<hr />
+<p><strong>2)</strong></p>
+<p>V = {A, B, C, D, E, F et G}</p>
+<p>E = {{A, B}, {A, C}, {A, D}, {B, F}, {B, E},{B, G}, {D, G}, {E, F}}</p>
+<p>Dessiner sa représentation sagittale</p>
+<details class="success">
+<summary>Corrigé</summary>
+<p><strong>1)</strong></p>
+<p>A et B <strong>sont</strong> / <del>ne sont pas</del> deux sommets adjacents ou voisins</p>
+<p>A et D <strong>sont</strong> / <del>ne sont pas</del> deux sommets non adjacents ou non voisins</p>
+<hr />
+<p><strong>2)</strong></p>
+<p><img alt="Graphe_3" src="../../assets/NSI/graphe3.png" style="max-height:200px" /></p>
+</details>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Définitions</p>
+<p>une <strong>chaîne</strong> est une suite de sommets reliés par des arêtes. La <strong>longueur</strong> de la chaîne est égale au nombre d'arêtes.</p>
+<p>Un <strong>cycle</strong> est une suite d'arêtes consécutives distinctes (chaîne simple) dont les deux sommets extrémités sont identiques</p>
+<p>Un graphe est <strong>connexe</strong> s’il existe pour tous les sommets, une chaîne les reliant (un graphe est connexe s’il est ‘en un seul morceau’)</p>
+<p><strong>L’ordre d’un graphe</strong> le nombre n de sommets de ce graphe.</p>
+<p>Le <strong>degré d’un sommet</strong> est le nombre de sommets qui lui sont adjacents</p>
+<p>Le <strong>degré d’un graphe</strong> le degré maximum de tous ses sommets.</p>
+<p>Un graphe <strong>simple</strong> est un graphe ne comportant ni boucles ni multi-arêtes, c'est-à-dire qu'aucun sommet n'est connecté à lui-même, et entre deux sommets il n'existe qu'une seule arête.</p>
+<p>Un graphe est <strong>planaire</strong> s’il admet une représentation sagittale où ses arêtes (ou arcs) ne se coupent pas.</p>
+<p>Un graphe non orienté est <strong>complet</strong> s’il est simple et si deux sommets quelconques sont reliés par une arête.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Remarque</p>
+<ul>
+<li>
+<p>Pour un graphe non orienté, la somme des degrés de ses sommets est égale à <strong>2</strong> fois le nombre de ses arêtes. lorsqu’on fait la somme des degrés des sommets, chaque arête est comptée deux fois.</p>
+</li>
+<li>
+<p>Les arbres sont des graphes connexes où il n’existe pas de cycle.</p>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="2-graphes-orientes"><strong>2) Graphes orientés</strong><a class="headerlink" href="#2-graphes-orientes" title="Permanent link">&para;</a></h2>
+<p><img align="right" alt="graphe_oriente1" src="../../assets/NSI/graphe_oriente1.png" /></p>
+<p>Dans un <strong>graphe orienté,</strong> on va imposer une direction sur les liaisons entre sommets.</p>
+<p>La relation entre A et B est orientée de A vers B</p>
+<p>Par exemple, on pourrait dire que A est plus grand que B, et A est plus grand que C, et C est plus grand que B.</p>
+<hr />
+<p><img align="right" alt="graphe_oriente2" src="../../assets/NSI/graphe_oriente2.png" /></p>
+<p>On rencontre par exemple des graphes orientés à travers la notion d'arborescence (arbres):</p>
+<ul>
+<li>
+<p>c'est un arbre dont chaque arête est remplacée par une relation orientée qu'on appelle arc;</p>
+</li>
+<li>
+<p>le sommet 0 est appelé la "racine"</p>
+</li>
+</ul>
+<p>Un <strong>arbre</strong> est donc un <strong>graphe orienté</strong> ne possédant aucun cycle.</p>
+<p>Il possède une seule racine tel que tous les nœuds sauf la racine ont un unique prédécesseur (parent)</p>
+<p><ins>-Application en informatique :</ins> l'arborescence des fichiers sur un ordinateurs</p>
+<div class="admonition note">
+<p class="admonition-title">Définition</p>
+<p>Un graphe orienté G = (V, E) est défini par :</p>
+<ul>
+<li>
+<p>d’un ensemble V = {v<sub>1</sub>, v<sub>2</sub>, …v<sub>n</sub>} dont les éléments v<sub>i</sub> sont appelés les <strong>sommets</strong> du graphe.</p>
+</li>
+<li>
+<p>d’un ensemble E = {e<sub>1</sub>, e<sub>2</sub>, …e<sub>n</sub>} dont les éléments sont des couples d'éléments de <strong>V</strong>, et sont appelés les <strong>arcs</strong> du graphe. Chaque arc e<sub>i</sub> s'écrit (v<sub>k</sub>, v<sub>m</sub>) avec v<sub>k</sub>, v<sub>m</sub> ∈ <em>V</em>.</p>
+</li>
+</ul>
+<p>Un <strong>chemin</strong> est une suite de sommets reliés par des arcs.</p>
+<p>Un graphe orienté est <strong>faiblement connexe</strong> si le graphe non orienté associé est connexe (graphe obtenu en transformant les arcs en arêtes, on ne considère plus l’orientation des arcs).</p>
+<p>Un graphe orienté est <strong>fortement connexe</strong> s'il existe un chemin (orienté) du sommet a au sommet b et du sommet b au sommet a, quels que soient les sommets représentés par a et b dans le graphe.</p>
+</div>
+<p><ins><strong>Exemple</strong></ins> :</p>
+<p>Pour définir un graphe orienté, il faut donc commencer par décrire l'ensemble de ses sommets :</p>
+<p>V={A, B, C, D, E}</p>
+<p>On peut alors donner l'ensemble de ses arcs :</p>
+<p>E={(A, A), (A, B), (B, D), (C, B), (C, D), (D, C), (E, A)}</p>
+<div class="admonition warning">
+<p class="admonition-title">Attention</p>
+<p>(A, B) ≠ (B, A) : l'ordre des éléments définissant l'arc est important à cause de l'orientation.</p>
+<p>Dans (A, B), A est la première composante de l'arc et B la seconde composante.</p>
+</div>
+<div class="admonition tip">
+<p>Ainsi, on peut définir pour chaque sommet son <strong>degré sortant</strong> (égal au nombre d’arcs dont il est la première composante) de son <strong>degré entrant</strong> (égal au nombre d’arcs dont il est la seconde composante)</p>
+</div>
+<div class="admonition tip">
+<p>Soit un arc (x, y), on dit que y est un <strong>successeur</strong> de x et que x est un <strong>prédécesseur</strong> de y.</p>
+<p>On dit également que x est <strong>l’origine</strong> de l’arc (x,y) et que y est son <strong>extrémité</strong>.</p>
+</div>
+<div class="admonition tip">
+<p>Un graphe orienté est <strong>complet</strong> si chaque paire de sommets est reliée par exactement deux arcs (un dans chaque sens)</p>
+</div>
+<hr />
+<h2 id="3-graphes-ponderes"><strong>3) Graphes pondérés</strong><a class="headerlink" href="#3-graphes-ponderes" title="Permanent link">&para;</a></h2>
+<p>Un graphe est <strong>pondéré</strong> (ou valué) si on attribue à chaque arête (ou arc) une valeur numérique (la plupart du temps positive), qu'on appelle <em>mesure</em>, <em>poids</em>, <em>coût</em> ou <em>valuation</em>.</p>
+<div class="admonition info">
+<p class="admonition-title">Remarque</p>
+<ul>
+<li>
+<p>Dans le protocole OSPF, on pondère les liaisons entre routeurs par le coût.</p>
+</li>
+<li>
+<p>Dans un réseau routier entre plusieurs villes, on pondère par les distances.</p>
+</li>
+</ul>
+</div>
+<p><strong><ins>Exemple d’un graphe non orienté pondéré :</ins></strong></p>
+<p><img alt="graphe_pondéré1" src="../../assets/NSI/graphe_pondere1.png" style="max-height:300px" /></p>
+<hr />
+<h2 id="representation-des-graphes"><strong>Représentation des graphes</strong><a class="headerlink" href="#representation-des-graphes" title="Permanent link">&para;</a></h2>
+<p>Pour représenter un graphe en langage machine, on utilise deux méthodes principales :</p>
+<ul>
+<li>
+<p>à l’aide de listes de successeurs ou de prédécesseurs ;</p>
+</li>
+<li>
+<p>à l’aide de matrice d’adjacence (le coefficient a<sub>i,j</sub> traduit l’existence ou non d’une liaison entre le sommet i et le sommet j).</p>
+</li>
+</ul>
+<h3 id="i-listes-de-successeurs"><strong>I) Listes de successeurs</strong><a class="headerlink" href="#i-listes-de-successeurs" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Définition</p>
+<p><strong>Listes de successeurs :</strong> à chaque sommet on associe la liste de tous ses voisins dans le cas d'un graphe non orienté ou de ses successeurs dans le cas d'un graphe orienté.</p>
+</div>
+<p>Représentation en machine du graphe :</p>
+<ul>
+<li>
+<p>On utilise un dictionnaire de listes qui est appelée dans ce cas <strong>liste d'adjacence</strong>.</p>
+</li>
+<li>
+<p>Les clés du dictionnaire sont les sommets. La valeur associée à un sommet est la liste des successeurs de ce sommet. (On peut aussi utiliser la liste de prédécesseurs).</p>
+</li>
+<li>
+<p>La liste des successeurs et celle des prédécesseurs sont identiques dans un graphe non orienté.</p>
+</li>
+<li>
+<p>Dans le cas d’un graphe pondéré, les listes sont remplacées par des dictionnaires. Le graphe est alors un dictionnaire de dictionnaires : le dictionnaire de successeurs a pour clés les étiquettes des sommets successeurs et pour valeurs les valuations des arêtes associées.</p>
+</li>
+</ul>
+<h2 id="pour-les-plus-curieux"><strong>Pour les plus curieux</strong><a class="headerlink" href="#pour-les-plus-curieux" title="Permanent link">&para;</a></h2>
+<p><strong><ins>Circuits imprimés :</ins></strong></p>
+<p>Des pistes de circuits imprimés qui ne se croisent jamais.</p>
+<p>C'est le cas des circuits imprimés. Le courant doit aller d'un point à un autre en parcourant une piste sans croiser une autre piste. Ce n'est pas toujours possible. Il faut alors ajouter une nouvelle couche de circuits. Le plus simple étant le double-face, mais certains circuits complexes peuvent compter huit ou dix couches.</p>
+<hr />
+<p><strong><ins>Application :</ins></strong></p>
+<p>Le graphe suivant est-il planaire ? graphe K5</p>
+<p><img alt="graphe_k5" src="../../assets/NSI/graphe_k5.png" style="max-height:300px" /></p>
+<details class="success">
+<summary>Réponse</summary>
+<p><strong>Non</strong></p>
+<p>(Démonstration <a href="http://villemin.gerard.free.fr/aMaths/Topologi/aaaGraph/Planaire.htm">villemin.gerard.free.fr</a>)</p>
+</details>
+<hr />
+<p><strong><ins>Énigme :</ins></strong></p>
+<p>Proposée en 1903 par Sam Loyd puis en 1917 par Henry Ernest Dudeney.</p>
+<p>Trois maisons doivent être chacune reliées à trois usines d’eau, de gaz et d’électricité. Peut-on disposer les canalisations de telle sorte qu’elles ne se chevauchent pas ?</p>
+<p>Ci-dessous figure l'illustration originale de l'auteur du problème :</p>
+<p><img alt="maison" src="../../assets/NSI/maison.png" style="max-height:300px" /></p>
+<p>Il est facile de voir que les maisons, usines et canalisations peuvent être modélisées par ce graphe :</p>
+<p><img alt="maison_graphe" src="../../assets/NSI/maison_graphe.png" style="max-height:300px" /></p>
+<p>La question peut alors se reformuler comme suit : le graphe précédent est-il planaire ?</p>
+<details class="success">
+<summary>Réponse</summary>
+<p><strong>Non</strong>, ce graphe est noté K3,3</p>
+<p>Il est impossible de relier ces trois maisons aux trois ressources sans croisement des raccordements. La meilleure solution ne permet de poser huit raccordements sur neuf demandés.</p>
+<p><img alt="maison_réponse" src="../../assets/NSI/maison_reponse.png" style="max-height:300px" /></p>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../Bases_de_donnees/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Bases de données">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Bases de données
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Lfox
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.footer", "navigation.path", "navigation.top", "toc.integrate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
