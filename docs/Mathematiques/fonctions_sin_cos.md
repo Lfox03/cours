@@ -6,7 +6,7 @@ status : new
 
 # Fonctions Sinus et Cosinus
 
-!!! Warning "En construction"
+!!! Warning "accès anticipé"
 
     Cette page est toujours en cours de rédaction. 
     

@@ -14,34 +14,38 @@ Les EM semblent a priori des espaces de liberté de circulation et d’exploitat
 
 ---
 
-## **I) A qui appartiennent Mers et Océans ?**
+## <span style="color: red;">**I) A qui appartiennent Mers et Océans ?**</span>
+
 → les frontières maritimes : un droit, des cas différents.
 
 !!! Abstract "[zone économique exclusive](https://youtu.be/Hn2eDmTrcII?feature=shared)"
     1. Quelle est la date de la convention et son nom ?
     1. Quels sont les espaces maritimes délimités ?
     1. La ZEE française est-elle importante ?
-### **A) La législation récente : les Accords de Montego Bay (ONU, 1982) appliqués depuis 1994 ( carte P 53, Schéma P 55)**
+
+### <span style="color: green;">**A) La législation récente : les Accords de Montego Bay (ONU, 1982) appliqués depuis 1994**</span>
+
+> carte P 53, Schéma P 55
 
 Un droit applicable aux états côtiers, et aux îles (indépendantes ou non) 
 
 → la moindre île, le moindre « caillou » ou récif devient donc essentiel.
 
-### **B) Résultats : un accès inégal aux Mers et Océans.**
+### <span style="color: green;">**B) Résultats : un accès inégal aux Mers et Océans.**</span>
 
 → posséder un vaste domaine maritime = un élément essentiel  de puissance
 
 ---
 
-## **II) Les tensions**
+## <span style="color: red;">**II) Les tensions**</span>
 
-### **A) les tensions géopolitiques**
+### <span style="color: green;">**A) les tensions géopolitiques**</span>
 
-#### **1) les détroits et canaux : concentration de tous les enjeux et de tous les risques.**
+#### <span style="color: blue;">**1) les détroits et canaux : concentration de tous les enjeux et de tous les risques.**</span>
 
 [Quel est le DÉTROIT le plus TRAVERSÉ au monde ?](https://youtu.be/2s8c0AjFlqU?feature=shared)
 
-#### **2) les pratiques illégales**
+#### <span style="color: blue;">**2) les pratiques illégales**</span>
 
 !!! Abstract "[Lutte contre la piraterie, la sécurité des mers](https://youtu.be/dtYu4v7A0Bo?feature=shared)"
     1. comment définir la piraterie ?
@@ -53,11 +57,13 @@ Un droit applicable aux états côtiers, et aux îles (indépendantes ou non)
  
 [Lutte contre la piraterie, la sécurité des mers](https://youtu.be/dtYu4v7A0Bo?feature=shared)
 
-#### **3) les zones maritimes contestées entre puissances de rang mondial et (ou) régional : l’exemple de l’Arctique**
+#### <span style="color: blue;">**3) les zones maritimes contestées entre puissances de rang mondial et (ou) régional : l’exemple de l’Arctiques**</span>
 
 [Chine, Russie, Etats-Unis : qui règnera sur l'Arctique ? - Géopoliticus | Lumni](https://youtu.be/dNInXzrsyB0?feature=shared)
 
-### **B) LA zone la plus sensible : Les mers de Chine. ( P36/37)**
+### <span style="color: green;">**B) LA zone la plus sensible : Les mers de Chine.**</span>
+
+> page 36/37
 
 !!! Abstract "[Chine : la mer, la puissance et le (non) droit - Le Dessous des cartes | ARTE](https://youtu.be/KMkQkOKPCJ0?feature=shared)"
     1. Quels sont les 3 espaces maritimes délimités ?

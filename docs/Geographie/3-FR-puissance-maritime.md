@@ -1,7 +1,6 @@
 ---
 title: Chapitre 3 - France - puissance maritime
 description: Chapitre 3 - La France - une puissance maritime
-status : new
 ---
 
 # Chapitre 3 - La France : une puissance maritime ?
@@ -66,6 +65,8 @@ grande ouverture maritime = 66 ports de commerce, de puissance très variables.
 ressources pour la pêche, l’aquaculture marine
 
 exploitation des fonds marins et de leurs éventuelles ressources énergétiques : secteur très peu actif pour le moment : les FTN type Total exploitent surtout des fonds marins étrangers.
+
+---
 
 ## <span style="color: red;">**II) les limites et les enjeux: une puissance maritime au final très moyenne.**</span>
 
@@ -155,6 +156,8 @@ nombreux ports de pêche, 13000 marins embarqués
 - la France doit donc maintenir son rang parmi les principales puissances navales (1ère en Europe, 7ème au niveau mondial)
 
 → d’où une hausse du budget « Marine » et le projet de construction d’un 2e porte avion nucléaire.
+
+---
 
 ## <span style="color: red;">**Conclusion**</span>
 

@@ -29,38 +29,38 @@ Les mers et océans ont toujours été un enjeux essentiel depuis l'Antiquité (
 
 ---
 
-## **I) Mers et Océans : les routes de la mondialisation**
+## <span style="color: red;">**I) Mers et Océans : les routes de la mondialisation**</span>
 
-### **A) les espaces maritimes = concentration de pôles et de flux**
+### <span style="color: green;">**A) les espaces maritimes = concentration de pôles et de flux**</span>
 
 Mers et Océans sont les artères de la mondialisation : 80% des échanges essentiels se font via les espaces maritimes.
 
-### **B) l'évolution des transports maritimes : Docs 1 à 3 P 43**
+### <span style="color: green;">**B) l'évolution des transports maritimes : Docs 1 à 3 P 43**</span>
 
  → plus et plus vite pour moins cher.
 
-#### **1) évolution des navires :**
+#### <span style="color: blue;">**1) évolution des navires**</span>
 
 * de + en + rapides
 * de + en + longs et gros
 
-#### **2) évolutions des flottes commerciales**
- 
+#### <span style="color: blue;">**2) évolutions des flottes commerciales**</span>
+
 Les entreprises transnationales sont les entreprises installées dans plusieurs pays.
 
-#### **3) évolutions des paysages et des activités portuaires**
- 
+#### <span style="color: blue;">**3) évolutions des paysages et des activités portuaires**</span>
+
 Diminution forte des dockers au profit de la mécanisation type portiques et grues à conteneurs
 
 ---
 
-## **II) Mers et Océans : des espaces de ressources de + en + exploitées**
+## <span style="color: red;">**II) Mers et Océans : des espaces de ressources de + en + exploitées**</span>
 
-### **A) les ressources halieutiques (carte P 40) : la pêche**
+### <span style="color: green;">**A) les ressources halieutiques (carte P 40) : la pêche**</span>
 
 Les ressources halieutiques ( déf. P 42)
 
-#### **1) la pêche :**
+#### <span style="color: blue;">**1) la pêche**</span>
 
 Véritables flottes de navires usines ( Asie surtout mais aussi Europe) opérant dans le monde entier ( problème : Question du contrôle des eaux territoriales, eaux internationales?)
 
@@ -68,17 +68,17 @@ Véritables flottes de navires usines ( Asie surtout mais aussi Europe) opérant
 
 Problème de la surexploitation des ressources et des accords à négocier (ex. conséquences du Brexit pour l'accès des eaux britanniques aux pêcheurs de l'UE)
 
-#### **2) l'aquaculture :**
+#### <span style="color: blue;">**2) l'aquaculture :**</span>
 
-### **B) les ressources énergétiques et minérales :**
+### <span style="color: green;">**B) les ressources énergétiques et minérales :**</span>
 
-#### **1) les énergies fossiles : pétrole et gaz off-shore (Golfe persique, golfe du Mexique, mer du Nord...)**
+#### <span style="color: blue;">**1) les énergies fossiles : pétrole et gaz off-shore (Golfe persique, golfe du Mexique, mer du Nord...)**</span>
 
 gisements exploités de + en + importants
 
-#### **2) les énergies renouvelables**
+#### <span style="color: blue;">**2) les énergies renouvelables**</span>
 
-#### **3) les ressources d'avenir : les grandes profondeurs ( « abysses » : > à 3000m )**
+#### <span style="color: blue;">**3) les ressources d'avenir : les grandes profondeurs ( « abysses » : > à 3000m )**</span>
 
 nodules polymétalliques : déf. P 42
 

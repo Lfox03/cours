@@ -5,17 +5,19 @@ description: Introduction aux codes Python les plus communs dans les exercices d
 
 # Python en mathématiques
 
-Bien que les exercices en Python soient souvent négligés, ils représentent pourtant une opportunité pour obtenir un ou deux points facilement.
+Les exercices en Python représentent, en mathématiques, une opportunité d'obtenir un point ou deux facilement.
 
-## 1. boucles
+Ils se présentent pour la quasi-totalité sous forme de texte à trous qu'il faut compléter.
 
-Quasiment la totalité des exercices de code Python en mathématiques sont des boucles à compléter, afin de calculer un certain seuil d'une limite.
+## **1. boucles**
 
-Les boucles permettent de répéter un code. Chaque exécution de la boucle est appelé une **itération**
+Quasiment la totalité des exercices de code Python en mathématiques sont des boucles à compléter, afin de calculer un certain seuil d'une suite.
+
+Les boucles permettent de répéter un code. Chaque exécution de la boucle est appelée une **itération**
 
 En python, il existe deux types de boucle:
 
-### 1.1. Les Boucle "For"
+### **1.1 Les Boucle "For"**
 
 La boucle ```for``` (en français **"Pour"**) est une boucle qui est exécutée pour un nombre déterminé d'itérations
 
@@ -30,7 +32,7 @@ print(nombre)
 >>> 10
 ```
 
-### 1.2. Les Boucle "While"
+### **1.2. Les Boucle "While"**
 
 La boucle ```while``` (en français **"tant que"**) est une boucle qui est exécutée tant qu'une certaine condition est valide 
 
