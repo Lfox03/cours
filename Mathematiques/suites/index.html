@@ -1,0 +1,1627 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="chapitre 1 - Suites numériques et récurrence.">
+      
+      
+      
+        <link rel="canonical" href="https://lfox03.github.io/cours/Mathematiques/suites/">
+      
+      
+        <link rel="prev" href="../python/">
+      
+      
+        <link rel="next" href="../../NSI/">
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Suites numériques & récurrence - FoxDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#suites-numeriques-et-recurrence" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="FoxDocs" class="md-header__button md-logo" aria-label="FoxDocs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FoxDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Suites numériques & récurrence
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Autre/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Autre
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Geographie/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Geographie
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Histoire/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Histoire
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Mathematiques
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../NSI/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  NSI
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="FoxDocs" class="md-nav__button md-logo" aria-label="FoxDocs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    FoxDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accueil
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Autre/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Autre
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Autre
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Autre/guide_mathjax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide de Syntaxe MathJax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Geographie/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Geographie
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Geographie
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Geographie/1-Mers-et-Oceans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 1 - M.& O. - vecteurs de la mondialisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Geographie/2-Mers-et-Oceans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 2 - M.& O. - enjeux géostratégiques
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Geographie/3-FR-puissance-maritime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 3 - France - puissance maritime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Histoire/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Histoire
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Histoire
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Histoire/1-crise_de_1929/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 1 - Crise de 1929
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Nouveau">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Histoire/2-totalitarismes_europeens/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 2 - Les totalitarismes européens
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Nouveau">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Histoire/3-2nd_GM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 3 - Seconde Guerre mondiale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Histoire/5-bipolariastion_tiers_Monde/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chapitre 5 - Bipolarisation et Tiers Monde
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Nouveau">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Mathematiques
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Mathematiques
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Primitives_equa_diff/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Primitives - Equations différentielles
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Nouveau">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Probabilitees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Probabilitées
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fonctions_sin_cos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fonctions Sinus et Cosinus
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new" title="Nouveau">
+    </span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Suites numériques & récurrence
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Suites numériques & récurrence
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-suites-particulieres" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Suites particulières
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Suites particulières">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-suites-arithmetiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Suites arithmétiques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-suites-geometriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Suites géométriques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-limite-dune-suite" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Limite d'une suite
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Limite d&#39;une suite">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-notations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Notations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-operations-sur-les-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Opérations sur les limites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Opérations sur les limites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-somme" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Somme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-produit" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Produit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-quotient" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Quotient
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-theoreme-de-la-convergence-monotone" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Théorème de la convergence monotone
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../NSI/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    NSI
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            NSI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NSI/Arbres/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arbres
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NSI/Bases_de_donnees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bases de données
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NSI/Graphes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="suites-numeriques-et-recurrence">Suites numériques et récurrence<a class="headerlink" href="#suites-numeriques-et-recurrence" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Dans ce chapitre, il s'agit de développer la notion de suite, étudiée en Première, et d'utiliser les propriétés de nouvelles fonctions introduites en Terminale.</p>
+</blockquote>
+<hr />
+<h2 id="1-suites-particulieres">1. Suites particulières<a class="headerlink" href="#1-suites-particulieres" title="Permanent link">&para;</a></h2>
+<h3 id="11-suites-arithmetiques">1.1 Suites arithmétiques<a class="headerlink" href="#11-suites-arithmetiques" title="Permanent link">&para;</a></h3>
+<p>La suite <span class="arithmatex">\((u_n)\)</span> est une suite arithmétique si :</p>
+<p>&nbsp;&nbsp;Pour tout <span class="arithmatex">\(n \in \mathbb{I}\)</span> (où <span class="arithmatex">\(\mathbb{I}\)</span> est un sous ensemble de <span class="arithmatex">\(\mathbb{N}\)</span>), on a:</p>
+<div class="arithmatex">\[ u_{n+1}-u_n = r\]</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice</p>
+<p>soit la suite <span class="arithmatex">\((u_n)\)</span> définie par :</p>
+<p>&nbsp;&nbsp;pour tout <span class="arithmatex">\(n \in \mathbb{N}\text{\ \{0,1,2\}, } u_{n} = 3n+5\)</span></p>
+<p>Donner la nature de la suite <span class="arithmatex">\((u_n)\)</span></p>
+<details class="success">
+<summary>Solution</summary>
+<p>Pour tout <span class="arithmatex">\(n \in \mathbb{N}\text{\ \{0,1,2\}, } u_{n+1} - u_n = 3(n+1)+5-(3n+5) = 3\)</span> (la différence de 2 termes consécutifs ne dépend pas de <span class="arithmatex">\(n\)</span>). Donc <span class="arithmatex">\((u_n)\)</span> est une suite arithmétique de raison <span class="arithmatex">\(r=3\)</span> et de <span class="arithmatex">\(1^{er}\)</span> terme <span class="arithmatex">\(u_3=14\)</span></p>
+</details>
+</div>
+<h3 id="12-suites-geometriques">1.2 Suites géométriques<a class="headerlink" href="#12-suites-geometriques" title="Permanent link">&para;</a></h3>
+<p>La suite <span class="arithmatex">\((V_n)\)</span> est une suite géométrique si :</p>
+<p>&nbsp;&nbsp;Pour tout <span class="arithmatex">\(n \in \mathbb{I}\)</span> (où <span class="arithmatex">\(\mathbb{I}\)</span> est un sous ensemble de <span class="arithmatex">\(\mathbb{N}\)</span>), on a:</p>
+<div class="arithmatex">\[ V_{n+1}=qV_n\]</div>
+<details class="info" open="open">
+<summary>remarque</summary>
+<p>On précisera toujours la raison <span class="arithmatex">\(q\)</span> et le <span class="arithmatex">\(1^{er}\)</span> terme de la suite.</p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Exercice</p>
+<p>soit la suite <span class="arithmatex">\((V_n)\)</span> définie par :</p>
+<p>&nbsp;&nbsp;pour tout <span class="arithmatex">\(n \in \mathbb{N}\text{\ \{0,1\}, } V_{n} = \frac{3}{2^n}\)</span></p>
+<p>Donner la nature de la suite <span class="arithmatex">\((V_n)\)</span>.</p>
+<details class="success">
+<summary>Solution</summary>
+<p>Pour tout <span class="arithmatex">\(n \in \mathbb{N}\text{\ \{0,1\}, } V_{n+1} = \frac{3}{3^{n+1}} = \frac{1}{2} \times \frac{3}{2^n} = \frac{1}{2}V_n\)</span>.</p>
+<p>Donc <span class="arithmatex">\((V_n)\)</span> est une suite géométrique de raison <span class="arithmatex">\(q=\frac{1}{2}\)</span> et de <span class="arithmatex">\(1^{er}\)</span> terme <span class="arithmatex">\(V_2=\frac{3}{4}\)</span></p>
+</details>
+</div>
+<hr />
+<h2 id="2-limite-dune-suite">2. Limite d'une suite<a class="headerlink" href="#2-limite-dune-suite" title="Permanent link">&para;</a></h2>
+<h3 id="31-notations">3.1 Notations<a class="headerlink" href="#31-notations" title="Permanent link">&para;</a></h3>
+<p>Une suite numérique est une application de <span class="arithmatex">\(\mathbb{N}\)</span> dans <span class="arithmatex">\(\mathbb{R}\)</span> :</p>
+<div class="admonition warning inline end">
+<p class="admonition-title">attention !</p>
+<p>En général <span class="arithmatex">\(u_n\)</span> n'est pas le <span class="arithmatex">\(n^{ième}\)</span> terme de la suite.</p>
+<p>Par exemple si <span class="arithmatex">\(u_0\)</span> est le premier terme de la suite <span class="arithmatex">\(u_n\)</span> est le <span class="arithmatex">\((n+1)^{ième}\)</span> terme.</p>
+</div>
+<div class="arithmatex">\[u : \{ {\mathbb{N} \rightarrow \mathbb{R}} \ {n \rightarrow u(n)}\]</div>
+<p>Au lieu de u(n) on écrit <span class="arithmatex">\(u_n\)</span>.</p>
+<p>La suite <span class="arithmatex">\(u\)</span> se note en général <span class="arithmatex">\((u_n)_{n \in \mathbb{N}}\)</span> ou plus simplement .</p>
+<p>On dit aussi que <span class="arithmatex">\((u_n)\)</span> est <strong>le terme général de rang <span class="arithmatex">\(n\)</span> ou d'indice <span class="arithmatex">\(n\)</span></strong> de la suite <span class="arithmatex">\((u_n)_{n \in \mathbb{N^{*}}}\)</span>.</p>
+<p>Si <span class="arithmatex">\((u_0)\)</span> n'est pas défini, la suite est notée <span class="arithmatex">\((u_n)_{n \in \mathbb{N^{*}}}\)</span>.
+De même, si <span class="arithmatex">\((u_0)\)</span> et <span class="arithmatex">\((u_1)\)</span> ne sont pas définis, la suite sera notée <span class="arithmatex">\((u_n)_{n \ge 2}\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Définition</p>
+<p>Soit <span class="arithmatex">\((u_n)\)</span> une suite numérique.</p>
+</div>
+<hr />
+<h2 id="3-operations-sur-les-limites">3. Opérations sur les limites<a class="headerlink" href="#3-operations-sur-les-limites" title="Permanent link">&para;</a></h2>
+<p>Soit <span class="arithmatex">\(u\)</span> et <span class="arithmatex">\(v\)</span> deux suites.</p>
+<h3 id="31-somme">3.1 Somme<a class="headerlink" href="#31-somme" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>si <span class="arithmatex">\(u\)</span> tend vers</strong></th>
+<th style="text-align: center;"><span class="arithmatex">\(l\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(l\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(l\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>et si <span class="arithmatex">\(v\)</span> tend vers</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(l'\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>alors <span class="arithmatex">\(u+v\)</span> tend vers</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(l+l'\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;">F.I.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-produit">3.2 Produit<a class="headerlink" href="#32-produit" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>si <span class="arithmatex">\(u\)</span> tend vers</strong></th>
+<th style="text-align: center;"><span class="arithmatex">\(l\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(l&gt;0\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(l&gt;0\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(l&lt;0\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(l&lt;0\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>et si <span class="arithmatex">\(v\)</span> tend vers</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(l'\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></td>
+<td><span class="arithmatex">\(+\infty\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>alors <span class="arithmatex">\(u*v\)</span> tend vers</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(l*l'\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td>F.I.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-quotient">3.3 Quotient<a class="headerlink" href="#33-quotient" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>si <span class="arithmatex">\(u\)</span> tend vers</strong></th>
+<th style="text-align: center;"><span class="arithmatex">\(l\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(l\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;"><span class="arithmatex">\(\pm\infty\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>et si <span class="arithmatex">\(v\)</span> tend vers</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(l\neq0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\pm\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(l'&gt;0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(l'&lt;0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(l'&gt;0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(l'&lt;0\)</span></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(\pm\infty\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>alors <span class="arithmatex">\(\frac{u}{v}\)</span> tend vers</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{l}{l'}\)</span></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(-\infty\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(+\infty\)</span></td>
+<td style="text-align: center;">F.I.</td>
+<td style="text-align: center;">F.I.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-theoreme-de-la-convergence-monotone">4. Théorème de la convergence monotone<a class="headerlink" href="#4-theoreme-de-la-convergence-monotone" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Définition</p>
+<p>Une suite croissante et majorée est convergente</p>
+<p>Une suite décroissante et minorée est convergente</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Retour en haut de la page
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../python/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Python">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Python
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../NSI/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Accueil">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Accueil
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Lfox
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.footer", "navigation.path", "navigation.top", "toc.integrate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
