@@ -38,3 +38,49 @@ la GF (47/62), la naissance du TM (1945-1975)
 ### <span style="color: green;">**A) La constitution des blocs et les formes de lutte ou de compétition**</span>
 
 Après avoir combattu ensemble contre l’Allemagne les Etats-Unis et l’URSS se méfient l’un de l’autre : Staline est préoccupé du monopole atomique des Etats-Unis, qui lui reprochent l’installation de gouvernements communistes en Europe de l’Est. Dès 1946, Churchill dénonce « le Rideau de Fer » qui partage l’Europe en deux.
+
+### <span style="color: green;">**B) Les grandes crises de l’apogée de la GF**</span>
+
+> 1947- 1962
+
+#### <span style="color: blue;">**1) l’origine directe de la GF : la question allemande cristallisée à Berlin**</span>
+
+> 1948 - 1961
+
+> Page 142 - 143
+
+→ la situation globale demeure inchangée, sans affrontement, jusqu’en 1989.
+
+#### <span style="color: blue;">**2) la guerre de Corée**</span>
+
+> 1950 - 1953
+
+> Page 147
+
+- phase 1 : invasion de la CS par la CN communiste
+
+- phase 2 : intervention EU et Chine
+
+- phase 3 : retour à la situation d’avant 50 (armistice de Pan Mun Jom)
+
+#### <span style="color: blue;">**3) La crise la plus grave de la GF : les fusées de Cuba**</span>
+
+> Octobre 1962
+
+> Page 144 - 145
+ 
+**Origines** : Cuba dirigée par Fidel Castro à partir de 1959, se rapproche de l’URSS à partir de 1961. Installation secrète de fusées URSS sur l’île (voir carte)
+
+## <span style="color: red;">**II) La fin de la guerre froide**</span>
+
+Par la suite dans les années 1960, les deux grandes puissances (États-Unis et Union soviétique) prennent conscience de la nécessité d'une politique de détente et décident d’entamer un dialogue, car un conflit engendrerait la disparition de l’espèce humaine vu les arsenaux nucléaires qu’ils possèdent.
+
+En Roumanie, le régime autocratique de Ceauşescu est le dernier à tomber, le 26 décembre 1989, et le dictateur est exécuté ainsi que sa femme.
+
+En 1990, Gorbatchev obtient le prix Nobel de la paix.
+
+## <span style="color: red;">**III) Décolonisation et naissance du tiers Monde : naissance de nouveaux acteurs internationaux**</span>
+
+### <span style="color: green;">**A) la décolonisation crée le TM**</span>
+
+> 1945 - 1975

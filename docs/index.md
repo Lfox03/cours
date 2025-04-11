@@ -72,9 +72,9 @@ L'objectif est de retranscrire les cours du lycée tout en restant fidèle à le
 
 ### Prochainement
 
-!!! note "*Mathématiques* : Primitives et Equations différentielles | *~ 50%*"
+!!! note "*Histoire* : Bipolarisation et naissance du Tiers Monde (1947-1975) | *~ 70%*"
 
-!!! note "*Histoire* : Bipolarisation et naissance du Tiers Monde (1947-1975) | *~ 15%*"
+!!! note "*Mathématiques* : Primitives et Equations différentielles | *~ 50%*"
 
 !!! note "*Mathématiques* : fonctions Sinus et Cosinus | *~ 40%*"
 
